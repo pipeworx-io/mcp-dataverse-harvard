@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.pipeworx-io/dataverse-harvard",
   "title": "Dataverse Harvard",
-  "description": "Harvard Dataverse — research dataset repository (~150k datasets)",
-  "version": "0.1.0",
+  "description": "Harvard Dataverse MCP.",
+  "version": "0.1.1",
   "websiteUrl": "https://pipeworx.io/packs/dataverse-harvard",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-dataverse-harvard",
