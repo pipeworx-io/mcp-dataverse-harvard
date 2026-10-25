@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-dataverse-harvard",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Harvard Dataverse MCP.",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-a482eff35f0ffb57a356d219e90d4e1b28a907856ff6d42e7140a8a905cf6c56",
-    "sourceCommit": "5749f83c0ea115fab4c0c0ef04b66b05f2507d67"
+    "sourceHash": "v1-cb984d2ae3d34d40b51ba240026268f62090f2645a9b3b6ab689db774b0cd815",
+    "sourceCommit": "29fb434ca65fe0f61191f19c3502f583f5fb99d7"
   }
 }
