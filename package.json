@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-dataverse-harvard",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Harvard Dataverse MCP.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-dataverse-harvard": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "dataverse-harvard"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-dataverse-harvard.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/dataverse-harvard",
   "pipeworx": {
-    "sourceHash": "v1-cb984d2ae3d34d40b51ba240026268f62090f2645a9b3b6ab689db774b0cd815",
-    "sourceCommit": "29fb434ca65fe0f61191f19c3502f583f5fb99d7"
+    "mode": "gateway",
+    "slug": "dataverse-harvard",
+    "gatewaySlug": "dataverse-harvard",
+    "sourceHash": "v1-c6e8a46cfc710746874cda0842db47bef93f431fa056e4885dbb1b46f1c7c77c",
+    "sourceCommit": "0b3faaa4d85299a961dd86dea75a0f0e1dad280c"
   }
 }

@@ -1,0 +1,77 @@
+[
+  {
+    "name": "search",
+    "description": "Keyword search across Harvard Dataverse — the ~200k-dataset open research repository. Returns dataset titles, DOIs, authors, publication dates and descriptions; pass a returned DOI to dataset or dataset_files. Use to find research data behind a paper or topic (e.g. \"climate\", \"survey experiment\", \"replication data\").",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "description": "dataset | file | dataverse"
+        },
+        "sort": {
+          "type": "string",
+          "description": "name | date"
+        },
+        "per_page": {
+          "type": "number",
+          "description": "1-1000 (default 25)."
+        },
+        "start": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "dataset",
+    "description": "Full metadata for one Harvard Dataverse dataset by its DOI persistent id: title, authors, abstract, subject, keywords, version and publication date. The id must come from search — DOIs cannot be guessed.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "persistent_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "persistent_id"
+      ]
+    }
+  },
+  {
+    "name": "dataset_files",
+    "description": "List all files in the latest version of a Harvard Dataverse dataset identified by its DOI persistent ID (e.g. \"doi:10.7910/DVN/...\"), returning file names, content types, sizes, and download URLs. For files Dataverse has TABULAR-INGESTED (CSV/DTA/SAV/POR under its ingest size limit), also returns exact COLUMN / VARIABLE NAMES and labels from Dataverse's DDI metadata (variables_by_file). If a dataset has no tabular-ingested files (common for very large files, or non-tabular formats), column names are not available from Dataverse at all — the response says so explicitly rather than silently omitting them.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "persistent_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "persistent_id"
+      ]
+    }
+  },
+  {
+    "name": "dataverse",
+    "description": "Dataverse (collection) metadata by alias or id.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "identifier": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "identifier"
+      ]
+    }
+  }
+]
