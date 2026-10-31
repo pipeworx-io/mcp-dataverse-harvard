@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-dataverse-harvard",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Harvard Dataverse MCP.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "dataverse-harvard",
     "gatewaySlug": "dataverse-harvard",
-    "sourceHash": "v1-c6e8a46cfc710746874cda0842db47bef93f431fa056e4885dbb1b46f1c7c77c",
-    "sourceCommit": "0b3faaa4d85299a961dd86dea75a0f0e1dad280c"
+    "sourceHash": "v1-17abd3a5ad3267b76b08dfa747a1bcb618b6d28f3e52291afb22e857f84b4a0f",
+    "sourceCommit": "5ce1a05186d46479e23865c66bdb8579d8de445e"
   }
 }
